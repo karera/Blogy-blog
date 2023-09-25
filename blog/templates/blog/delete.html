@@ -1,0 +1,10 @@
+{% extends 'blog/bases.html' %}
+
+{% block content %}
+
+<h2>Delete Post </h2>
+<h1> Are you sure you want to delete post </h1>
+<button >Delete</button>
+<a href="{{post.get_absolute_url}}"><button>Cancel</button></a>
+
+{% endblock content %}
