@@ -12,6 +12,8 @@ django-ckeditor = "*"
 django-cloudinary-storage = "*"
 cloudinary = "*"
 python-dotenv = "*"
+gunicorn = "*"
+whitenoise = "*"
 
 [dev-packages]
 
