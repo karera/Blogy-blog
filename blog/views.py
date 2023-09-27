@@ -17,7 +17,10 @@ def home(request):
    return render(request, 'blog/index.html',context)
 
 def about(request):
-    return render(request, 'blog/category.html')
+    return render(request, 'blog/about.html')
+
+def contact(request):
+    return render(request, 'blog/contact.html')
 
 
 
@@ -118,7 +121,7 @@ def update_post(request,slug ,uuid):
 @login_required
 def delete(request,slug ,uuid):
    
-    obj = Blog.objects.get( slug=slug, id=uuid)
+    obj = get_object_or_404(Blog, slug=slug, id=uuid)
     if request.method == 'POST':
         obj.delete()
         return redirect('blog-bloges')
